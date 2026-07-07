@@ -64,10 +64,17 @@
 	</div>
 	<script src="js/main.js"></script>
 	<script type="text/javascript">
-		window.DRAWIO_CONFIG = {
-			gdriveClientId: '830967002622-3oe0rpp5as6cqq2nb1duf632qci6df35.apps.googleusercontent.com',
-			gdriveAppId: '830967002622'
-		};
+		// Force Google APIs to stay active on this domain
+		var urlParams = urlParams || {};
+		urlParams['gapi'] = '1';
+
+		// Direct configuration hooks for the static client app
+		window.EXPORT_URL = 'https://draw.ayuch.dev/service/0';
+		window.PLUGINS_BASE_URL = 'https://draw.ayuch.dev/plugins';
+
+		// Inject your Google Cloud app credentials explicitly
+		window.GDRIVE_CLIENT_ID = '830967002622-3oe0rpp5as6cqq2nb1duf632qci6df35.apps.googleusercontent.com';
+		window.GDRIVE_APP_ID = '830967002622';
 	</script>
 </body>
 
